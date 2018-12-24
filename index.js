@@ -1,6 +1,7 @@
 var express = require("express");
 const hbs = require("hbs");
 const fs = require("fs");
+const port = process.env.PORT || 3000;
 
 var app = express();
 // to register hbs partials
@@ -40,6 +41,6 @@ app.get("/contact", function(req, res) {
   });
 });
 
-app.listen("3000", () => {
-  console.log("app is listening on port 3000");
+app.listen(port, () => {
+  console.log(`app is listening on port ${port}`);
 });
