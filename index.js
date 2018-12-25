@@ -41,6 +41,14 @@ app.get("/contact", function(req, res) {
   });
 });
 
+app.get("/feedback", function(req, res) {
+  // res.send("this is test app");
+  res.render("feedback.hbs", {
+    title: "feedback us page",
+    content: "this is the content of feedback page"
+  });
+});
+
 app.listen(port, () => {
   console.log(`app is listening on port ${port}`);
 });
